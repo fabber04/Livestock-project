@@ -97,7 +97,7 @@ class GazeboView:
             time.sleep(0.5)
         raise SystemExit(
             "Gazebo did not advertise "
-            f"{self._service}. Start it with run_ddroid_sim.sh first."
+            f"{self._service}. Start Gazebo with simulation/launch_gui.sh first."
         )
 
     def _subscribe_camera(self):
