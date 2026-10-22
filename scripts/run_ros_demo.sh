@@ -1,7 +1,7 @@
 #!/bin/bash
 # Build the ROS 2 workspace and run the water-point demonstration.
 set -eo pipefail
-ROOT="$(cd "$(dirname "$0")" && pwd)"
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 # shellcheck disable=SC1091
 source /opt/ros/lyrical/setup.bash
 export DDROID_SIM="$ROOT/simulation"

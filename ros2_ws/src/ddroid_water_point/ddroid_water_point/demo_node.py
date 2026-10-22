@@ -30,11 +30,12 @@ def find_simulation_dir():
 
 
 class DdroidNode(Node):
-    def __init__(self, plant, ctl, view, interactive):
+    def __init__(self, plant, ctl, view, interactive, herd):
         super().__init__("ddroid_controller")
         self.plant = plant
         self.ctl = ctl
         self.view = view
+        self.herd = herd
         self.interactive = interactive
         self.dt = 0.1
         self._mode = self.create_publisher(String, "/ddroid/mode", 10)
@@ -45,6 +46,8 @@ class DdroidNode(Node):
         self._trough_l = self.create_publisher(Float32, "/ddroid/trough_litres", 10)
         self._supply_l = self.create_publisher(Float32, "/ddroid/supply_litres", 10)
         self._status = self.create_publisher(String, "/ddroid/status", 10)
+        self._intake = self.create_publisher(String, "/ddroid/intake", 10)
+        self._gps = self.create_publisher(String, "/ddroid/gps", 10)
         if interactive:
             self.create_subscription(String, "/ddroid/command", self.on_command, 10)
             self.create_timer(self.dt, self.on_timer)
@@ -84,11 +87,23 @@ class DdroidNode(Node):
         self._trough_l.publish(trough_l)
         self._supply_l.publish(supply_l)
         self._status.publish(status)
+        if self.herd is not None:
+            intake = String()
+            intake.data = self.herd.intake_text()
+            gps = String()
+            gps.data = self.herd.gps_text()
+            self._intake.publish(intake)
+            self._gps.publish(gps)
 
     def on_timer(self):
         low, high, source, cutoff = self.plant.raw_switches()
         self.ctl.step(self.dt, low, high, source, cutoff)
         self.plant.step(self.dt, self.ctl.pump)
+        if self.herd is not None:
+            at_trough = (not self.plant.hardware_pump) and (
+                self.plant.trough_l > 0.02 or self.plant.last_drunk_l > 0
+            )
+            self.herd.step(self.dt, self.plant.last_drunk_l, at_trough)
         if self.view is not None:
             self.view.update(self.plant, self.ctl)
         self.publish_state()
@@ -125,17 +140,19 @@ def _prepare(demo):
     sys.argv = [arg for arg in sys.argv if arg != "--gazebo"]
 
     from ddroid_control import Controller, Plant
+    from ddroid_track import HerdBook
 
     rclpy.init()
     plant = Plant()
     ctl = Controller(*plant.raw_switches())
+    herd = HerdBook()
     view = None
     if use_gazebo:
         from run_sim import GazeboView
 
-        view = GazeboView()
+        view = GazeboView(herd)
         view.update(plant, ctl)
-    node = DdroidNode(plant, ctl, view, interactive=not demo)
+    node = DdroidNode(plant, ctl, view, interactive=not demo, herd=herd)
     if demo:
         from ddroid_demo import run_demo
 
@@ -144,6 +161,7 @@ def _prepare(demo):
                 plant,
                 ctl,
                 view=view,
+                herd=herd,
                 dt=0.1,
                 realtime=True,
                 log=node.log_story,

@@ -4,3 +4,7 @@
 *.xml text eol=lf
 *.md text eol=lf
 *.cfg text eol=lf
+*.config text eol=lf
+*.pdf binary
+*.mp4 binary
+*.png binary

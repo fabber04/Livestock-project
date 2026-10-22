@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="solar_panel">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="link">
+        <visual name="pole">
+          <pose>0 0 0.70 0 0 0</pose>
+          <geometry><cylinder><radius>0.0500</radius><length>1.4000</length></cylinder></geometry>
+          <material><ambient>0.7 0.72 0.74 1.0</ambient><diffuse>0.7 0.72 0.74 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="mount">
+          <pose>0 0 1.42 0 0 0</pose>
+          <geometry><box><size>0.1000 0.1000 0.1000</size></box></geometry>
+          <material><ambient>0.7 0.72 0.74 1.0</ambient><diffuse>0.7 0.72 0.74 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="frame">
+          <pose>0 0 1.50 -0.35 0 0</pose>
+          <geometry><box><size>1.2400 0.7400 0.0400</size></box></geometry>
+          <material><ambient>0.7 0.72 0.74 1.0</ambient><diffuse>0.7 0.72 0.74 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="cells">
+          <pose>0 0 1.50 -0.35 0 0</pose>
+          <geometry><box><size>1.1800 0.6800 0.0460</size></box></geometry>
+          <material><ambient>0.07 0.1 0.22 1.0</ambient><diffuse>0.07 0.1 0.22 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+      <collision name="collision"><pose>0 0 0.70 0 0 0</pose><geometry><cylinder><radius>0.0500</radius><length>1.4000</length></cylinder></geometry></collision>
+    </link>
+  </model>
+</sdf>

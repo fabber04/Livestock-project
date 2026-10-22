@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="mode_manual">
+    <pose>0 0 0 0 0 0</pose>
+    <static>false</static>
+    <link name="link">
+      <kinematic>true</kinematic>
+      <gravity>false</gravity>
+      <inertial>
+        <mass>0.02</mass>
+        <inertia>
+          <ixx>0.0001</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.0001</iyy><iyz>0</iyz><izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <visual name="visual">
+        <geometry><sphere><radius>0.0900</radius></sphere></geometry>
+        <material><ambient>0.9 0.7 0.1 1.0</ambient><diffuse>0.9 0.7 0.1 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular><emissive>0.630 0.490 0.070 1</emissive></material>
+      </visual>
+    </link>
+  </model>
+</sdf>

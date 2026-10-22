@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="gate_track">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry><polyline><point>1.4000 0.0000</point><point>1.3828 0.4067</point><point>1.3315 0.8034</point><point>1.2474 1.1804</point><point>1.1326 1.5282</point><point>0.9899 1.8385</point><point>0.8229 2.1034</point><point>0.6356 2.3166</point><point>0.4326 2.4727</point><point>0.2190 2.5680</point><point>0.0000 2.6000</point><point>-0.2190 2.5680</point><point>-0.4326 2.4727</point><point>-0.6356 2.3166</point><point>-0.8229 2.1034</point><point>-0.9899 1.8385</point><point>-1.1326 1.5282</point><point>-1.2474 1.1804</point><point>-1.3315 0.8034</point><point>-1.3828 0.4067</point><point>-1.4000 0.0000</point><point>-1.3828 -0.4067</point><point>-1.3315 -0.8034</point><point>-1.2474 -1.1804</point><point>-1.1326 -1.5282</point><point>-0.9899 -1.8385</point><point>-0.8229 -2.1034</point><point>-0.6356 -2.3166</point><point>-0.4326 -2.4727</point><point>-0.2190 -2.5680</point><point>-0.0000 -2.6000</point><point>0.2190 -2.5680</point><point>0.4326 -2.4727</point><point>0.6356 -2.3166</point><point>0.8229 -2.1034</point><point>0.9899 -1.8385</point><point>1.1326 -1.5282</point><point>1.2474 -1.1804</point><point>1.3315 -0.8034</point><point>1.3828 -0.4067</point><height>0.0060</height></polyline></geometry>
+        <material><ambient>0.58 0.45 0.29 1.0</ambient><diffuse>0.58 0.45 0.29 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+      </visual>
+    </link>
+  </model>
+</sdf>

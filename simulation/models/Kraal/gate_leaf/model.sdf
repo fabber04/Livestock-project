@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="gate_leaf">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="link">
+        <visual name="stile_hinge">
+          <pose>0.04 0 0.78 0 0 0</pose>
+          <geometry><box><size>0.0800 0.0800 0.9000</size></box></geometry>
+          <material><ambient>0.47 0.4 0.32 1.0</ambient><diffuse>0.47 0.4 0.32 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="stile_end">
+          <pose>1.7100 0 0.78 0 0 0</pose>
+          <geometry><box><size>0.0800 0.0800 0.9000</size></box></geometry>
+          <material><ambient>0.47 0.4 0.32 1.0</ambient><diffuse>0.47 0.4 0.32 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="rail_top">
+          <pose>0.8750 0 1.15 0 0 0</pose>
+          <geometry><box><size>1.7500 0.0600 0.0800</size></box></geometry>
+          <material><ambient>0.4 0.26 0.13 1.0</ambient><diffuse>0.4 0.26 0.13 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="rail_mid">
+          <pose>0.8750 0 0.78 0 0 0</pose>
+          <geometry><box><size>1.7500 0.0600 0.0600</size></box></geometry>
+          <material><ambient>0.4 0.26 0.13 1.0</ambient><diffuse>0.4 0.26 0.13 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="rail_low">
+          <pose>0.8750 0 0.40 0 0 0</pose>
+          <geometry><box><size>1.7500 0.0600 0.0800</size></box></geometry>
+          <material><ambient>0.4 0.26 0.13 1.0</ambient><diffuse>0.4 0.26 0.13 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="brace">
+          <pose>0.8750 0 0.78 0 -0.4049 0</pose>
+          <geometry><box><size>1.9039 0.0500 0.0600</size></box></geometry>
+          <material><ambient>0.4 0.26 0.13 1.0</ambient><diffuse>0.4 0.26 0.13 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+    </link>
+  </model>
+</sdf>

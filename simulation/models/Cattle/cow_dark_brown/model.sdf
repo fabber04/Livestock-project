@@ -1,0 +1,163 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="cow_dark_brown">
+    <pose>0 0 0 0 0 0</pose>
+    <static>false</static>
+    <link name="link">
+      <kinematic>true</kinematic>
+      <gravity>false</gravity>
+      <inertial>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.02</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.02</iyy><iyz>0</iyz><izz>0.02</izz>
+        </inertia>
+      </inertial>
+        <visual name="body">
+          <pose>0 0 1.05 0 0 0</pose>
+          <geometry><ellipsoid><radii>0.9800 0.3600 0.3300</radii></ellipsoid></geometry>
+          <material><ambient>0.4 0.24 0.12 1.0</ambient><diffuse>0.4 0.24 0.12 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="belly">
+          <pose>0.05 0 0.88 0 0 0</pose>
+          <geometry><ellipsoid><radii>0.7200 0.3000 0.2400</radii></ellipsoid></geometry>
+          <material><ambient>0.4 0.24 0.12 1.0</ambient><diffuse>0.4 0.24 0.12 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="rump">
+          <pose>-0.70 0 1.10 0 0 0</pose>
+          <geometry><ellipsoid><radii>0.3400 0.3300 0.3000</radii></ellipsoid></geometry>
+          <material><ambient>0.4 0.24 0.12 1.0</ambient><diffuse>0.4 0.24 0.12 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="hump">
+          <pose>0.62 0 1.36 0 0 0</pose>
+          <geometry><ellipsoid><radii>0.2400 0.1700 0.1300</radii></ellipsoid></geometry>
+          <material><ambient>0.4 0.24 0.12 1.0</ambient><diffuse>0.4 0.24 0.12 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="patch_shoulder">
+          <pose>0.32 0.08 1.14 0 0 0</pose>
+          <geometry><ellipsoid><radii>0.3000 0.3000 0.2200</radii></ellipsoid></geometry>
+          <material><ambient>0.1 0.1 0.11 1.0</ambient><diffuse>0.1 0.1 0.11 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="patch_hip">
+          <pose>-0.48 -0.08 1.12 0 0 0</pose>
+          <geometry><ellipsoid><radii>0.2600 0.3000 0.2000</radii></ellipsoid></geometry>
+          <material><ambient>0.1 0.1 0.11 1.0</ambient><diffuse>0.1 0.1 0.11 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="neck">
+          <pose>1.00 0 1.20 0 -0.45 0</pose>
+          <geometry><ellipsoid><radii>0.2800 0.1800 0.2200</radii></ellipsoid></geometry>
+          <material><ambient>0.4 0.24 0.12 1.0</ambient><diffuse>0.4 0.24 0.12 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="dewlap">
+          <pose>1.02 0 0.98 0 0 0</pose>
+          <geometry><ellipsoid><radii>0.2000 0.0600 0.1600</radii></ellipsoid></geometry>
+          <material><ambient>0.4 0.24 0.12 1.0</ambient><diffuse>0.4 0.24 0.12 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="head">
+          <pose>1.40 0 1.24 0 0.35 0</pose>
+          <geometry><ellipsoid><radii>0.2700 0.1600 0.1700</radii></ellipsoid></geometry>
+          <material><ambient>0.4 0.24 0.12 1.0</ambient><diffuse>0.4 0.24 0.12 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="muzzle">
+          <pose>1.62 0 1.10 0 0 0</pose>
+          <geometry><ellipsoid><radii>0.1300 0.1200 0.1000</radii></ellipsoid></geometry>
+          <material><ambient>0.2 0.14 0.13 1.0</ambient><diffuse>0.2 0.14 0.13 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="eye_left">
+          <pose>1.46 0.14 1.30 0 0 0</pose>
+          <geometry><sphere><radius>0.0280</radius></sphere></geometry>
+          <material><ambient>0.06 0.06 0.07 1.0</ambient><diffuse>0.06 0.06 0.07 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="eye_right">
+          <pose>1.46 -0.14 1.30 0 0 0</pose>
+          <geometry><sphere><radius>0.0280</radius></sphere></geometry>
+          <material><ambient>0.06 0.06 0.07 1.0</ambient><diffuse>0.06 0.06 0.07 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="ear_left">
+          <pose>1.30 0.24 1.36 0.35 0 0</pose>
+          <geometry><box><size>0.0600 0.2000 0.1000</size></box></geometry>
+          <material><ambient>0.4 0.24 0.12 1.0</ambient><diffuse>0.4 0.24 0.12 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="ear_right">
+          <pose>1.30 -0.24 1.36 -0.35 0 0</pose>
+          <geometry><box><size>0.0600 0.2000 0.1000</size></box></geometry>
+          <material><ambient>0.4 0.24 0.12 1.0</ambient><diffuse>0.4 0.24 0.12 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="horn_left">
+          <pose>1.30 0.16 1.50 -0.6 0 0</pose>
+          <geometry><capsule><radius>0.0300</radius><length>0.2200</length></capsule></geometry>
+          <material><ambient>0.86 0.8 0.66 1.0</ambient><diffuse>0.86 0.8 0.66 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="horn_right">
+          <pose>1.30 -0.16 1.50 0.6 0 0</pose>
+          <geometry><capsule><radius>0.0300</radius><length>0.2200</length></capsule></geometry>
+          <material><ambient>0.86 0.8 0.66 1.0</ambient><diffuse>0.86 0.8 0.66 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="tail">
+          <pose>-1.02 0 0.92 0 -0.2 0</pose>
+          <geometry><capsule><radius>0.0250</radius><length>0.6000</length></capsule></geometry>
+          <material><ambient>0.4 0.24 0.12 1.0</ambient><diffuse>0.4 0.24 0.12 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="tail_tuft">
+          <pose>-0.95 0 0.58 0 0 0</pose>
+          <geometry><sphere><radius>0.0600</radius></sphere></geometry>
+          <material><ambient>0.1 0.1 0.11 1.0</ambient><diffuse>0.1 0.1 0.11 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="collar">
+          <pose>1.05 0 1.22 0 0 0</pose>
+          <geometry><box><size>0.1400 0.4000 0.1800</size></box></geometry>
+          <material><ambient>0.85 0.05 0.85 1.0</ambient><diffuse>0.85 0.05 0.85 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="collar_tag">
+          <pose>1.05 -0.22 1.25 0 0 0</pose>
+          <geometry><box><size>0.2000 0.0500 0.3200</size></box></geometry>
+          <material><ambient>0.85 0.05 0.85 1.0</ambient><diffuse>0.85 0.05 0.85 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="gps_puck">
+          <pose>1.05 0 1.42 0 0 0</pose>
+          <geometry><sphere><radius>0.0600</radius></sphere></geometry>
+          <material><ambient>0.85 0.05 0.85 1.0</ambient><diffuse>0.85 0.05 0.85 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="leg_0">
+          <pose>-0.62 -0.22 0.42 0 0 0</pose>
+          <geometry><capsule><radius>0.0650</radius><length>0.5600</length></capsule></geometry>
+          <material><ambient>0.4 0.24 0.12 1.0</ambient><diffuse>0.4 0.24 0.12 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="hoof_0">
+          <pose>-0.62 -0.22 0.04 0 0 0</pose>
+          <geometry><cylinder><radius>0.0700</radius><length>0.0800</length></cylinder></geometry>
+          <material><ambient>0.08 0.07 0.06 1.0</ambient><diffuse>0.08 0.07 0.06 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="leg_1">
+          <pose>-0.62 0.22 0.42 0 0 0</pose>
+          <geometry><capsule><radius>0.0650</radius><length>0.5600</length></capsule></geometry>
+          <material><ambient>0.4 0.24 0.12 1.0</ambient><diffuse>0.4 0.24 0.12 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="hoof_1">
+          <pose>-0.62 0.22 0.04 0 0 0</pose>
+          <geometry><cylinder><radius>0.0700</radius><length>0.0800</length></cylinder></geometry>
+          <material><ambient>0.08 0.07 0.06 1.0</ambient><diffuse>0.08 0.07 0.06 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="leg_2">
+          <pose>0.55 -0.22 0.42 0 0 0</pose>
+          <geometry><capsule><radius>0.0650</radius><length>0.5600</length></capsule></geometry>
+          <material><ambient>0.4 0.24 0.12 1.0</ambient><diffuse>0.4 0.24 0.12 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="hoof_2">
+          <pose>0.55 -0.22 0.04 0 0 0</pose>
+          <geometry><cylinder><radius>0.0700</radius><length>0.0800</length></cylinder></geometry>
+          <material><ambient>0.08 0.07 0.06 1.0</ambient><diffuse>0.08 0.07 0.06 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="leg_3">
+          <pose>0.55 0.22 0.42 0 0 0</pose>
+          <geometry><capsule><radius>0.0650</radius><length>0.5600</length></capsule></geometry>
+          <material><ambient>0.4 0.24 0.12 1.0</ambient><diffuse>0.4 0.24 0.12 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="hoof_3">
+          <pose>0.55 0.22 0.04 0 0 0</pose>
+          <geometry><cylinder><radius>0.0700</radius><length>0.0800</length></cylinder></geometry>
+          <material><ambient>0.08 0.07 0.06 1.0</ambient><diffuse>0.08 0.07 0.06 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+    </link>
+  </model>
+</sdf>

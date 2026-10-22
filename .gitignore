@@ -5,5 +5,6 @@ ros2_ws/build/
 ros2_ws/install/
 ros2_ws/log/
 simulation/frames/
+docs/_preview/
 *.xwd
 .DS_Store

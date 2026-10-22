@@ -29,7 +29,7 @@ def _status_line(t, plant, ctl):
     )
 
 
-def run_demo(plant, ctl, view=None, dt=0.1, realtime=False, log=print, hold_s=8.0, on_step=None):
+def run_demo(plant, ctl, view=None, dt=0.1, realtime=False, log=print, hold_s=8.0, on_step=None, herd=None):
     """Run one demonstration. Returns the controller event kinds in order."""
     phase = "boot"
     phase_t = 0.0
@@ -89,6 +89,9 @@ def run_demo(plant, ctl, view=None, dt=0.1, realtime=False, log=print, hold_s=8.
 
         ctl.step(dt, low, high, source, cutoff)
         plant.step(dt, ctl.pump)
+        if herd is not None:
+            at_trough = (not plant.hardware_pump) and (plant.trough_l > 0.02 or plant.last_drunk_l > 0)
+            herd.step(dt, plant.last_drunk_l, at_trough)
 
         if phase == "first_fill" and any(
             event["kind"] == "full_stop" for event in ctl.events
@@ -112,6 +115,8 @@ def run_demo(plant, ctl, view=None, dt=0.1, realtime=False, log=print, hold_s=8.
 
         if t - logged_status >= 1.0:
             log(_status_line(t, plant, ctl))
+            if herd is not None:
+                log(herd.one_line())
             logged_status = t
 
         if phase == "hold" and phase_t >= hold_s:

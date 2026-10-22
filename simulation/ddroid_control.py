@@ -31,6 +31,7 @@ class Plant:
         self.supply_l = SUPPLY_START_L
         self.force_pump = False
         self.hardware_pump = False
+        self.last_drunk_l = 0.0
 
     def trough_fraction(self):
         return self.trough_l / TROUGH_CAPACITY_L
@@ -52,6 +53,7 @@ class Plant:
         cutoff = self.trough_fraction() >= TROUGH_CUTOFF
         commanded = bool(software_pump or self.force_pump)
         self.hardware_pump = commanded and not cutoff
+        self.last_drunk_l = 0.0
         if cutoff:
             self.force_pump = False
             self.trough_l = min(self.trough_l, TROUGH_CUTOFF * TROUGH_CAPACITY_L)
@@ -66,7 +68,9 @@ class Plant:
                 self.hardware_pump = False
                 self.force_pump = False
         elif self.trough_l > 0.0:
+            before = self.trough_l
             self.trough_l = max(0.0, self.trough_l - DRINK_L_PER_S * dt)
+            self.last_drunk_l = before - self.trough_l
 
         self.supply_l = max(0.0, min(SUPPLY_CAPACITY_L, self.supply_l))
         self.trough_l = max(0.0, min(TROUGH_CAPACITY_L, self.trough_l))

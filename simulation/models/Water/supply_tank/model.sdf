@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="supply_tank">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="floor">
+      <pose>-2.6000 0.0000 0.1900 0 0 0</pose>
+      <visual name="visual">
+        <geometry><box><size>0.8400 0.8400 0.0600</size></box></geometry>
+        <material><ambient>0.1 0.36 0.2 1.0</ambient><diffuse>0.1 0.36 0.2 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+      </visual>
+      <collision name="collision"><geometry><box><size>0.8400 0.8400 0.0600</size></box></geometry></collision>
+    </link>
+    <link name="wall_left">
+      <pose>-2.9900 0.0000 0.8600 0 0 0</pose>
+      <visual name="visual">
+        <geometry><box><size>0.0600 0.7200 1.2800</size></box></geometry>
+        <material><ambient>0.1 0.36 0.2 1.0</ambient><diffuse>0.1 0.36 0.2 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+      </visual>
+      <collision name="collision"><geometry><box><size>0.0600 0.7200 1.2800</size></box></geometry></collision>
+    </link>
+    <link name="wall_right">
+      <pose>-2.2100 0.0000 0.8600 0 0 0</pose>
+      <visual name="visual">
+        <geometry><box><size>0.0600 0.7200 1.2800</size></box></geometry>
+        <material><ambient>0.1 0.36 0.2 1.0</ambient><diffuse>0.1 0.36 0.2 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+      </visual>
+      <collision name="collision"><geometry><box><size>0.0600 0.7200 1.2800</size></box></geometry></collision>
+    </link>
+    <link name="wall_back">
+      <pose>-2.6000 0.3900 0.8600 0 0 0</pose>
+      <visual name="visual">
+        <geometry><box><size>0.8400 0.0600 1.2800</size></box></geometry>
+        <material><ambient>0.1 0.36 0.2 1.0</ambient><diffuse>0.1 0.36 0.2 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+      </visual>
+      <collision name="collision"><geometry><box><size>0.8400 0.0600 1.2800</size></box></geometry></collision>
+    </link>
+    <link name="wall_front">
+      <pose>-2.6000 -0.3900 0.4888 0 0 0</pose>
+      <visual name="visual">
+        <geometry><box><size>0.8400 0.0600 0.5376</size></box></geometry>
+        <material><ambient>0.1 0.36 0.2 1.0</ambient><diffuse>0.1 0.36 0.2 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+      </visual>
+      <collision name="collision"><geometry><box><size>0.8400 0.0600 0.5376</size></box></geometry></collision>
+    </link>
+  </model>
+</sdf>

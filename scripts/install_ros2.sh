@@ -4,7 +4,7 @@ set -euo pipefail
 export DEBIAN_FRONTEND=noninteractive
 
 if [ "$(id -u)" -ne 0 ]; then
-  echo "Run as root: wsl -d Ubuntu -u root -- bash simulation/install_ros2.sh"
+  echo "Run as root: wsl -d Ubuntu -u root -- bash scripts/install_ros2.sh"
   exit 1
 fi
 

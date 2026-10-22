@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="trough_mud">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry><polyline><point>2.3000 0.0000</point><point>2.2717 0.4537</point><point>2.1874 0.8961</point><point>2.0493 1.3166</point><point>1.8607 1.7046</point><point>1.6263 2.0506</point><point>1.3519 2.3461</point><point>1.0442 2.5839</point><point>0.7107 2.7581</point><point>0.3598 2.8643</point><point>0.0000 2.9000</point><point>-0.3598 2.8643</point><point>-0.7107 2.7581</point><point>-1.0442 2.5839</point><point>-1.3519 2.3461</point><point>-1.6263 2.0506</point><point>-1.8607 1.7046</point><point>-2.0493 1.3166</point><point>-2.1874 0.8961</point><point>-2.2717 0.4537</point><point>-2.3000 0.0000</point><point>-2.2717 -0.4537</point><point>-2.1874 -0.8961</point><point>-2.0493 -1.3166</point><point>-1.8607 -1.7046</point><point>-1.6263 -2.0506</point><point>-1.3519 -2.3461</point><point>-1.0442 -2.5839</point><point>-0.7107 -2.7581</point><point>-0.3598 -2.8643</point><point>-0.0000 -2.9000</point><point>0.3598 -2.8643</point><point>0.7107 -2.7581</point><point>1.0442 -2.5839</point><point>1.3519 -2.3461</point><point>1.6263 -2.0506</point><point>1.8607 -1.7046</point><point>2.0493 -1.3166</point><point>2.1874 -0.8961</point><point>2.2717 -0.4537</point><height>0.0120</height></polyline></geometry>
+        <material><ambient>0.3 0.21 0.11 1.0</ambient><diffuse>0.3 0.21 0.11 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+      </visual>
+    </link>
+  </model>
+</sdf>

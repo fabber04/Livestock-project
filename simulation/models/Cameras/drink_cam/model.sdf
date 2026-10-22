@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="drink_cam">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="post">
+      <pose>2.7000 -1.1500 0.7750 0 0 0</pose>
+      <visual name="visual">
+        <geometry><box><size>0.0800 0.0800 1.5500</size></box></geometry>
+        <material><ambient>0.47 0.4 0.32 1.0</ambient><diffuse>0.47 0.4 0.32 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+      </visual>
+    </link>
+    <link name="head">
+      <pose>2.7000 -1.1500 1.5500 0.0000 0.1500 2.6600</pose>
+      <visual name="housing">
+        <pose>-0.08 0 0 0 0 0</pose>
+        <geometry><box><size>0.14 0.10 0.08</size></box></geometry>
+        <material><ambient>0.12 0.12 0.13 1.0</ambient><diffuse>0.12 0.12 0.13 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+      </visual>
+      <visual name="sun_hood">
+        <pose>-0.05 0 0.05 0 0 0</pose>
+        <geometry><box><size>0.20 0.13 0.015</size></box></geometry>
+        <material><ambient>0.12 0.12 0.13 1.0</ambient><diffuse>0.12 0.12 0.13 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+      </visual>
+      <visual name="lens">
+        <pose>0.01 0 0 0 0 0</pose>
+        <geometry><box><size>0.02 0.05 0.05</size></box></geometry>
+        <material><ambient>0.02 0.02 0.02 1.0</ambient><diffuse>0.02 0.02 0.02 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+      </visual>
+      <sensor name="drink_cam" type="camera">
+        <always_on>1</always_on>
+        <update_rate>4</update_rate>
+        <visualize>false</visualize>
+        <topic>drink_cam</topic>
+        <camera>
+          <horizontal_fov>1.15</horizontal_fov>
+          <image>
+            <width>320</width>
+            <height>240</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.15</near>
+            <far>8</far>
+          </clip>
+        </camera>
+      </sensor>
+    </link>
+  </model>
+</sdf>

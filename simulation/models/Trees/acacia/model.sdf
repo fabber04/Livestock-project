@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="acacia">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="link">
+        <visual name="trunk">
+          <pose>0 0 1.10 0 0.08 0</pose>
+          <geometry><cylinder><radius>0.1400</radius><length>2.2000</length></cylinder></geometry>
+          <material><ambient>0.3 0.22 0.15 1.0</ambient><diffuse>0.3 0.22 0.15 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="branch_east">
+          <pose>0.35 0.10 2.35 0 0.75 0</pose>
+          <geometry><cylinder><radius>0.0700</radius><length>1.2000</length></cylinder></geometry>
+          <material><ambient>0.3 0.22 0.15 1.0</ambient><diffuse>0.3 0.22 0.15 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="branch_west">
+          <pose>-0.30 -0.15 2.30 0 -0.7 0</pose>
+          <geometry><cylinder><radius>0.0600</radius><length>1.1000</length></cylinder></geometry>
+          <material><ambient>0.3 0.22 0.15 1.0</ambient><diffuse>0.3 0.22 0.15 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="canopy">
+          <pose>0.15 0 3.05 0 0 0</pose>
+          <geometry><ellipsoid><radii>2.1000 1.8000 0.3800</radii></ellipsoid></geometry>
+          <material><ambient>0.18 0.4 0.16 1.0</ambient><diffuse>0.18 0.4 0.16 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="canopy_top">
+          <pose>-0.20 0.20 3.35 0 0 0</pose>
+          <geometry><ellipsoid><radii>1.3000 1.1000 0.2800</radii></ellipsoid></geometry>
+          <material><ambient>0.3 0.44 0.18 1.0</ambient><diffuse>0.3 0.44 0.18 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="canopy_low">
+          <pose>1.10 -0.60 2.85 0 0 0</pose>
+          <geometry><ellipsoid><radii>1.0000 0.9000 0.2600</radii></ellipsoid></geometry>
+          <material><ambient>0.13 0.3 0.12 1.0</ambient><diffuse>0.13 0.3 0.12 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+      <collision name="collision"><pose>0 0 1.10 0 0 0</pose><geometry><cylinder><radius>0.1400</radius><length>2.2000</length></cylinder></geometry></collision>
+    </link>
+  </model>
+</sdf>

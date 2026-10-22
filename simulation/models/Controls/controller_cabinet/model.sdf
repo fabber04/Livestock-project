@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="controller_cabinet">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="link">
+        <visual name="pole">
+          <pose>0 0 0.34 0 0 0</pose>
+          <geometry><cylinder><radius>0.0400</radius><length>0.6800</length></cylinder></geometry>
+          <material><ambient>0.7 0.72 0.74 1.0</ambient><diffuse>0.7 0.72 0.74 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="enclosure">
+          <pose>0 0 0.86 0 0 0</pose>
+          <geometry><box><size>0.3000 0.1600 0.3600</size></box></geometry>
+          <material><ambient>0.86 0.86 0.82 1.0</ambient><diffuse>0.86 0.86 0.82 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="display">
+          <pose>0 -0.082 0.92 0 0 0</pose>
+          <geometry><box><size>0.2000 0.0060 0.0800</size></box></geometry>
+          <material><ambient>0.06 0.06 0.07 1.0</ambient><diffuse>0.06 0.06 0.07 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+        <visual name="lamp_holder">
+          <pose>0 0 1.1000 0 0 0</pose>
+          <geometry><cylinder><radius>0.0400</radius><length>0.1200</length></cylinder></geometry>
+          <material><ambient>0.15 0.16 0.18 1.0</ambient><diffuse>0.15 0.16 0.18 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+        </visual>
+      <collision name="collision"><pose>0 0 0.52 0 0 0</pose><geometry><box><size>0.3000 0.1600 1.0400</size></box></geometry></collision>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="rock_small">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry><ellipsoid><radii>0.1800 0.1400 0.1000</radii></ellipsoid></geometry>
+        <material><ambient>0.4 0.38 0.35 1.0</ambient><diffuse>0.4 0.38 0.35 1.0</diffuse><specular>0.15 0.15 0.15 1.0</specular></material>
+      </visual>
+    </link>
+  </model>
+</sdf>
