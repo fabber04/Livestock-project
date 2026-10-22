@@ -116,6 +116,21 @@ def code(text):
     return Preformatted(text.rstrip() + "\n", S["Mono"])
 
 
+# Names and roles as listed in docs/DDROID_SRS.pdf.
+TEAM = (
+    ("Tapiwa Chigome", "Project Manager"),
+    ("Fabilous Lashid", "Software Engineer"),
+    ("Tanatswa Bernard Nyautore", "Systems Engineer"),
+    ("Tinotenda Gozi", "Network Engineer"),
+    ("Praise Muzvonda", "Programmer 1"),
+    ("Nickson Gondwe", "Programmer 2"),
+    ("Claris Chinanga", "Test Programmer"),
+    ("Divine Pezari", "Database Administrator"),
+    ("Lionel Tadiwanashe Tiugari", "AI/ML Engineer"),
+    ("Keith Tawananyasha Mutabvuri", "Chief Security Officer"),
+)
+
+
 def decorate(canvas, doc):
     canvas.saveState()
     width, height = A4
@@ -126,7 +141,7 @@ def decorate(canvas, doc):
     canvas.drawString(16 * mm, height - 7 * mm, "DDROID   Smart Livestock Watering and Monitoring")
     canvas.setFillColor(colors.HexColor("#5c6b60"))
     canvas.setFont("Times-Roman", 8.5)
-    canvas.drawString(16 * mm, 8 * mm, "NUST group project")
+    canvas.drawString(16 * mm, 8 * mm, "DDROID Project Team, Group 4  |  NUST BSc Hons Computer Science, Second Year Group Project")
     canvas.drawRightString(width - 16 * mm, 8 * mm, str(doc.page))
     canvas.setStrokeColor(RULE)
     canvas.setLineWidth(0.4)
@@ -141,7 +156,7 @@ def build():
         leftMargin=16 * mm, rightMargin=16 * mm,
         topMargin=18 * mm, bottomMargin=16 * mm,
         title="How the DDROID project works",
-        author="n02528843x@students.nust.ac.zw",
+        author="DDROID Project Team (Group 4), NUST",
     )
     usable = A4[0] - 32 * mm
     story = []
@@ -152,9 +167,23 @@ def build():
         "A stationary controller fills a drinking trough, latches faults, and records how much water each collared cow drank. Gazebo is the yard. ROS 2 carries status and operator commands.",
         S["CoverSub"],
     ))
-    story.append(Paragraph("22 October 2026 &nbsp;&nbsp; n02528843x@students.nust.ac.zw", S["FooterNote"]))
+    story.append(Paragraph(
+        "DDROID Project Team, Group 4 &nbsp;&nbsp; National University of Science and Technology, "
+        "BSc Hons Computer Science, Second Year Group Project &nbsp;&nbsp; 22 October 2026",
+        S["FooterNote"],
+    ))
     story.append(Spacer(1, 2 * mm))
     story.append(HRFlowable(width="100%", thickness=1, color=GREEN, spaceAfter=6))
+    half = (len(TEAM) + 1) // 2
+    story.append(table(
+        ["Team member", "Role", "Team member", "Role"],
+        [
+            [*TEAM[index], *(TEAM[index + half] if index + half < len(TEAM) else ("", ""))]
+            for index in range(half)
+        ],
+        [50 * mm, 36 * mm, 56 * mm, usable - 142 * mm],
+    ))
+    story.append(Spacer(1, 3 * mm))
 
     story.append(H("1. What the system is"))
     story.append(P(

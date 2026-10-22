@@ -1,8 +1,23 @@
 # DDROID livestock water-point simulation
 
-Prototype for the NUST group project **DDROID Smart Livestock Watering and Monitoring System**.
+Prototype for the group project **DDROID Smart Livestock Watering and Monitoring System**, built by the DDROID Project Team (Group 4) for the Second Year Group Project course, BSc Hons Computer Science, National University of Science and Technology (NUST). The requirements are in `docs/DDROID_SRS.pdf`.
 
-Author: n02528843x@students.nust.ac.zw
+## Team
+
+| Team member | Role |
+| --- | --- |
+| Tapiwa Chigome | Project Manager |
+| Fabilous Lashid | Software Engineer |
+| Tanatswa Bernard Nyautore | Systems Engineer |
+| Tinotenda Gozi | Network Engineer |
+| Praise Muzvonda | Programmer 1 |
+| Nickson Gondwe | Programmer 2 |
+| Claris Chinanga | Test Programmer |
+| Divine Pezari | Database Administrator |
+| Lionel Tadiwanashe Tiugari | AI/ML Engineer |
+| Keith Tawananyasha Mutabvuri | Chief Security Officer |
+
+Repository contact: n02528843x@students.nust.ac.zw
 
 ## Workspace
 
